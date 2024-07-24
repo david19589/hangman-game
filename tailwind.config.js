@@ -1063,9 +1063,10 @@ export default {
     extend: {
       boxShadow: {
         "custom-shadow": [
-          "inset 0 1px 0 6px #3C74FF",
-          "inset 0 -2px 0 3px #140E66",
+          "inset 0 6px 5px 0 #3C74FF",
+          "inset 0 -2px 0 1px  #140E66",
         ],
+        "custom-shadow-2": "inset 0 -5px 0 0 #9D2DF540",
       },
     },
   },

@@ -13,6 +13,7 @@
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react-router-dom": "^6.25.1",
+    "react-transition-group": "^4.4.5",
     "sort-by": "^0.0.2"
   },
   "devDependencies": {

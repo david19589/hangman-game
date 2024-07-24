@@ -12,16 +12,18 @@ function MainMenu() {
           src={Logo}
           alt="Logo"
         />
-        <div className="relative cursor-pointer rounded-full mb-[3.5rem] hover:translate-y-[-0.2rem] transition-all duration-200">
-          <img
-            className="rounded-full"
-            src={PlayBackground}
-            alt="PlayBackground"
-          />
-          <img className="absolute top-11 right-12" src={Play} alt="Play" />
-        </div>
-        <Link to="/how-to-play">
-          <button className="text-[2rem] leading-[2.4rem] tracking-[5%] text-[#FFF] bg-[#2463FF] shadow-custom-shadow rounded-full max-w-[16rem] w-full py-[0.8rem] px-[1rem] hover:bg-[#2462ffb4] transition-all duration-300">
+        <Link to="/pick-category">
+          <div className="relative cursor-pointer rounded-full mb-[3.5rem] hover:translate-y-[-0.2rem] transition-all duration-200">
+            <img
+              className="rounded-full"
+              src={PlayBackground}
+              alt="PlayBackground"
+            />
+            <img className="absolute top-11 right-12" src={Play} alt="Play" />
+          </div>
+        </Link>
+        <Link to="/how-to-play" className="flex justify-center w-full">
+          <button className="text-[2rem] leading-[2.4rem] text-[#FFF] bg-[#2463FF] shadow-custom-shadow rounded-full max-w-[16rem] w-full py-[0.8rem] px-[1rem] hover:bg-[#2462ffb4] transition-all duration-300">
             HOW TO PLAY
           </button>
         </Link>
