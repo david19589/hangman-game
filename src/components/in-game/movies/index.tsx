@@ -1,8 +1,25 @@
 import Menu from "/src/assets/icon-menu.svg";
 import Heart from "/src/assets/icon-heart.svg";
 import { Link } from "react-router-dom";
+import Data from "../../data.json";
+import WordToGuess from "../word- to-guess";
+import Keyboard from "../keyboard";
 
 function Movies() {
+  const getRandomMovieName = () => {
+    const movie = Data.categories.Movies;
+    if (movie.length === 0) return "";
+    const randomIndex = Math.floor(Math.random() * movie.length);
+    return movie[randomIndex].name;
+  };
+
+  const word = getRandomMovieName();
+  const guessedLetters: string[] = ["a"];
+
+  const incorrectLetters = guessedLetters.filter(
+    (letter) => !word.includes(letter)
+  );
+
   return (
     <div className="flex flex-col items-center min-h-[100vh] px-[1.5rem] pt-[2rem] pb-[3.5rem] bg-gradient-to-b from-[#1A043A] via-[#151278] to-[#2B1677]">
       <div className="flex justify-between items-center w-full mb-[5rem]">
@@ -22,6 +39,17 @@ function Movies() {
           </div>
           <img className="w-[2rem]" src={Heart} alt="Heart" />
         </div>
+      </div>
+      <div className="flex flex-col items-center">
+        <WordToGuess
+          getRandomMovieName={getRandomMovieName}
+          word={word}
+          guessedLetters={guessedLetters}
+        />
+        <Keyboard
+          guessedLetters={guessedLetters}
+          incorrectLetters={incorrectLetters}
+        />
       </div>
     </div>
   );
