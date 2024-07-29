@@ -1067,8 +1067,20 @@ export default {
           "inset 0 -2px 0 1px  #140E66",
         ],
         "custom-shadow-2": "inset 0 -5px 0 0 #9D2DF540",
+        "custom-shadow-3": [
+          "inset 0 4px 2px 3px #C642FB",
+          "inset 0 -2px 0 1px  #140E66",
+        ],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-stroke-black": {
+          "-webkit-text-stroke": "0.2rem black",
+        },
+      });
+    },
+  ],
 };
