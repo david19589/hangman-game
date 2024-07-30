@@ -28,7 +28,7 @@ function Keyboard() {
   }, [addGuessedLetter]);
 
   return (
-    <div className="grid grid-cols-9 gap-[0.5rem]">
+    <div className="md:gap-[0.8rem] grid grid-cols-9 gap-[0.5rem]">
       {alphabet.map((letter) => (
         <div
           onClick={() => {
@@ -40,11 +40,10 @@ function Keyboard() {
               incorrectLetters.includes(letter)
               ? "opacity-75 cursor-default"
               : "opacity-100 cursor-pointer hover:bg-[#2463FF] group",
-
-            "flex justify-center items-center bg-[#FFF] py-[0.6rem] px-[0.7rem] sm:w-[2.5rem] w-[2rem] h-[3.8rem] rounded-xl"
+            "lg:w-[5.5rem] md:w-[3rem] md:h-[4.4rem] flex justify-center items-center bg-[#FFF] py-[0.6rem] px-[0.7rem] sm:w-[2rem] w-[1.5rem] h-[3.8rem] rounded-xl"
           )}
         >
-          <h2 className="text-[2.5rem] leading-[3rem] text-[#000] uppercase group-hover:text-[#FFF]">
+          <h2 className="md:text-[3rem] text-[2.5rem] leading-[3rem] text-[#000] uppercase group-hover:text-[#FFF]">
             {letter}
           </h2>
         </div>

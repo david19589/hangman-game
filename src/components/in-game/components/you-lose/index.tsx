@@ -7,7 +7,7 @@ function YouLose() {
   return (
     <div className="flex flex-col items-center justify-center absolute top-0 bottom-0 left-0 right-0 px-[1.5rem] bg-gradient-to-b from-[#1a043abd] via-[#151278b0] to-[#2b16779d]">
       <div className="flex flex-col items-center max-w-[37rem] w-full px-[2rem] pb-[5.5rem] shadow-custom-shadow bg-gradient-to-b from-[#344aba] to-[#001479e5] rounded-[4rem]">
-        <h1 className="text-[6rem] leading-[7rem] tracking-[-0.25rem] inline-block bg-gradient-to-b from-[#67B6FF] to-[#FFF] text-transparent bg-clip-text translate-y-[-3.5rem] text-stroke-black">
+        <h1 className="text-[5rem] sm:text-[6rem] leading-[7rem] tracking-[-0.25rem] inline-block bg-gradient-to-b from-[#67B6FF] to-[#FFF] text-transparent bg-clip-text translate-y-[-3.5rem] text-stroke-black">
           You Lose
         </h1>
         <button

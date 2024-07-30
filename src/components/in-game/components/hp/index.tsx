@@ -7,7 +7,7 @@ function Hp() {
 
   return (
     <div className="flex justify-end items-center gap-[1rem] mb-[5rem]">
-      <div className="flex items-center justify-start px-[0.3rem] w-[3.5rem] h-[1rem] bg-[#FFF] rounded-full">
+      <div className="md:w-[5rem] flex items-center justify-start px-[0.3rem] w-[3.5rem] h-[1rem] bg-[#FFF] rounded-full">
         <span
           className={clsx(
             incorrectLetters.length === 0 && "w-full",
@@ -21,7 +21,7 @@ function Hp() {
           )}
         ></span>
       </div>
-      <img className="w-[2rem]" src={Heart} alt="Heart" />
+      <img className="md:w-[2.5rem] w-[2rem]" src={Heart} alt="Heart" />
     </div>
   );
 }

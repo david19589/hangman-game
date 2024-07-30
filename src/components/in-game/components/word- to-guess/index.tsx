@@ -6,7 +6,7 @@ function WordToGuess() {
   const wordParts = word.split(" ");
 
   return (
-    <div className="flex flex-wrap justify-center items-center max-w-[45rem] w-full gap-[0.5rem] mb-[7.5rem]">
+    <div className="lg:max-w-[60rem] flex flex-wrap justify-center items-center max-w-[45rem] w-full gap-[0.5rem] mb-[7.5rem]">
       {wordParts.map((part, partIndex) => (
         <div
           key={partIndex}
@@ -19,7 +19,7 @@ function WordToGuess() {
                 guessedLetters.includes(letter.toLowerCase())
                   ? "bg-[#2463FF] shadow-custom-shadow"
                   : "bg-[#2462ff4d]",
-                "flex justify-center py-[0.6rem] px-[0.7rem] rounded-xl sm:w-[2.5rem] w-[2rem] h-[3.8rem]"
+                "lg:w-[3.9rem] lg:h-[5rem] md:w-[3rem] md:h-[4.4rem] flex justify-center py-[0.6rem] px-[0.7rem] rounded-xl sm:w-[2.5rem] w-[2rem] h-[3.8rem]"
               )}
             >
               <span
@@ -27,7 +27,7 @@ function WordToGuess() {
                   guessedLetters.includes(letter.toLowerCase())
                     ? "flex"
                     : "hidden",
-                  "text-[2.5rem] leading-[3rem] text-[#FFF] uppercase"
+                  "lg:text-[4rem] md:text-[3.5rem] text-[2.5rem] leading-[3rem] text-[#FFF] uppercase"
                 )}
               >
                 {letter}

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 function MainMenu() {
   return (
-    <div className="flex flex-col items-center justify-center h-[100vh] px-[1.5rem] lg:bg-[url('/src/assets/background-desktop.svg')] md:bg-[url('/src/assets/background-tablet.svg')] bg-[url('/src/assets/background-mobile.svg')] bg-no-repeat bg-cover bg-center">
-      <div className="flex flex-col items-center px-[2rem] pb-[4rem] shadow-custom-shadow bg-gradient-to-b from-[#344ABA] to-[#001479D4] rounded-[4rem]">
+    <div className="md:px-[2.5rem] flex flex-col items-center justify-center h-[100vh] px-[1.5rem] lg:bg-[url('/src/assets/background-desktop.svg')] md:bg-[url('/src/assets/background-tablet.svg')] bg-[url('/src/assets/background-mobile.svg')] bg-no-repeat bg-cover bg-center">
+      <div className="md:px-[5rem] flex flex-col items-center px-[2rem] pb-[4rem] shadow-custom-shadow bg-gradient-to-b from-[#344ABA] to-[#001479D4] rounded-[4rem]">
         <img
           className="sm:translate-y-[-5.5rem] translate-y-[-3rem]"
           src={Logo}
