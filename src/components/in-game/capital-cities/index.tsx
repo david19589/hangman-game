@@ -75,7 +75,7 @@ function CapitalCities() {
               alt="Menu"
             />
           </button>
-          <h1 className="sm:text-[3rem] text-[1.5rem] leading-[3.6rem] text-[#FFF]">
+          <h1 className="sm:text-[3rem] text-[1.1rem] leading-[3.6rem] text-[#FFF]">
             Capital Cities
           </h1>
         </div>
