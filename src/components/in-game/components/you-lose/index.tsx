@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useStateStore } from "../../../../utils/store";
 
 function YouLose() {
-  const { resetGame, youLose } = useStateStore();
-  console.log(youLose);
+  const { resetGame } = useStateStore();
+
   return (
     <div className="flex flex-col items-center justify-center absolute top-0 bottom-0 left-0 right-0 px-[1.5rem] bg-gradient-to-b from-[#1a043abd] via-[#151278b0] to-[#2b16779d]">
       <div className="flex flex-col items-center max-w-[37rem] w-full px-[2rem] pb-[5.5rem] shadow-custom-shadow bg-gradient-to-b from-[#344aba] to-[#001479e5] rounded-[4rem]">

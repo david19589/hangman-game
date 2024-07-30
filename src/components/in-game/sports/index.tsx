@@ -9,7 +9,7 @@ import YouLose from "../components/you-lose";
 import { useStateStore } from "../../../utils/store";
 import Hp from "../components/hp";
 
-function TvShows() {
+function Sports() {
   const {
     usedWords,
     setUsedWords,
@@ -25,12 +25,12 @@ function TvShows() {
     setYouLose,
   } = useStateStore();
 
-  const getRandomTvShowName = useCallback(() => {
-    const movie = Data.categories["TV Shows"];
+  const getRandomSportsName = useCallback(() => {
+    const movie = Data.categories.Sports;
     const available = movie.filter((m) => !usedWords.includes(m.name));
     if (available.length === 0) {
       setUsedWords([]);
-      return getRandomTvShowName();
+      return getRandomSportsName();
     }
     const randomIndex = Math.floor(Math.random() * available.length);
     const newWord = available[randomIndex].name;
@@ -38,8 +38,8 @@ function TvShows() {
   }, [setUsedWords, usedWords]);
 
   useEffect(() => {
-    setWord(getRandomTvShowName());
-  }, [getRandomTvShowName, setWord]);
+    setWord(getRandomSportsName());
+  }, [getRandomSportsName, setWord]);
 
   useEffect(() => {
     const cleanedWord = word
@@ -60,7 +60,7 @@ function TvShows() {
       setYouLose(false);
     }
   }, [incorrectLetters.length, setYouLose]);
-
+  console.log(word);
   return (
     <div className="flex flex-col items-center min-h-[100vh] px-[1.5rem] pt-[2rem] pb-[3.5rem] bg-gradient-to-b from-[#1A043A] via-[#151278] to-[#2B1677]">
       <div className="flex justify-between items-center w-full mb-[5rem]">
@@ -76,7 +76,7 @@ function TvShows() {
             />
           </button>
           <h1 className="sm:text-[3rem] text-[1.5rem] leading-[3.6rem] text-[#FFF]">
-            Tv Shows
+            Sports
           </h1>
         </div>
         <Hp />
@@ -92,4 +92,4 @@ function TvShows() {
   );
 }
 
-export default TvShows;
+export default Sports;

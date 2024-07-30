@@ -9,7 +9,7 @@ import YouLose from "../components/you-lose";
 import { useStateStore } from "../../../utils/store";
 import Hp from "../components/hp";
 
-function TvShows() {
+function CapitalCities() {
   const {
     usedWords,
     setUsedWords,
@@ -25,12 +25,12 @@ function TvShows() {
     setYouLose,
   } = useStateStore();
 
-  const getRandomTvShowName = useCallback(() => {
-    const movie = Data.categories["TV Shows"];
+  const getRandomCapitalCitiesName = useCallback(() => {
+    const movie = Data.categories["Capital Cities"];
     const available = movie.filter((m) => !usedWords.includes(m.name));
     if (available.length === 0) {
       setUsedWords([]);
-      return getRandomTvShowName();
+      return getRandomCapitalCitiesName();
     }
     const randomIndex = Math.floor(Math.random() * available.length);
     const newWord = available[randomIndex].name;
@@ -38,8 +38,8 @@ function TvShows() {
   }, [setUsedWords, usedWords]);
 
   useEffect(() => {
-    setWord(getRandomTvShowName());
-  }, [getRandomTvShowName, setWord]);
+    setWord(getRandomCapitalCitiesName());
+  }, [getRandomCapitalCitiesName, setWord]);
 
   useEffect(() => {
     const cleanedWord = word
@@ -76,7 +76,7 @@ function TvShows() {
             />
           </button>
           <h1 className="sm:text-[3rem] text-[1.5rem] leading-[3.6rem] text-[#FFF]">
-            Tv Shows
+            Capital Cities
           </h1>
         </div>
         <Hp />
@@ -92,4 +92,4 @@ function TvShows() {
   );
 }
 
-export default TvShows;
+export default CapitalCities;

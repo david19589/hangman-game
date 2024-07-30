@@ -10,6 +10,7 @@ type stateStore = {
   setGuessedLetters: (status: string[]) => void;
   addGuessedLetter: (status: string) => void;
   incorrectLetters: string[];
+  setIncorrectLetters: (status: string[]) => void;
   pause: boolean;
   setPause: (status: boolean) => void;
   youWin: boolean;
@@ -40,6 +41,7 @@ export const useStateStore = create<stateStore>((set, get) => ({
       return state;
     }),
   incorrectLetters: [],
+  setIncorrectLetters: (incorrectLetters) => set({ incorrectLetters }),
   pause: false,
   setPause: (pause) => set({ pause }),
   youWin: false,
@@ -55,6 +57,7 @@ export const useStateStore = create<stateStore>((set, get) => ({
     const {
       setWord,
       setGuessedLetters,
+      setIncorrectLetters,
       setUsedWords,
       setYouLose,
       setYouWin,
@@ -65,12 +68,11 @@ export const useStateStore = create<stateStore>((set, get) => ({
     // Reset game states
     setGuessedLetters([]); // Reset guessed letters
     setUsedWords([]); // Reset used words
-    console.log('Before reset:', get().youLose, get().youWin, get().pause);
+    setIncorrectLetters([]); //Reset incorrectLetters
     setYouLose(false); // Reset lose state
     setYouWin(false); // Reset win state
     setPause(false); // Reset pause state
-    console.log('After reset:', get().youLose, get().youWin, get().pause);
-    
+
     // Set a new word from the current category
     const getRandomName = () => {
       const categoryData = Data.categories[currentCategory as CategoryKey];

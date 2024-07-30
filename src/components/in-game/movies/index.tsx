@@ -1,5 +1,4 @@
 import Menu from "/src/assets/icon-menu.svg";
-import Heart from "/src/assets/icon-heart.svg";
 import Data from "../../data.json";
 import WordToGuess from "../components/word- to-guess";
 import Keyboard from "../components/keyboard";
@@ -8,6 +7,7 @@ import Paused from "../components/paused";
 import YouWin from "../components/you-win";
 import YouLose from "../components/you-lose";
 import { useStateStore } from "../../../utils/store";
+import Hp from "../components/hp";
 
 function Movies() {
   const {
@@ -79,12 +79,7 @@ function Movies() {
             Movies
           </h1>
         </div>
-        <div className="flex justify-end items-center gap-[1rem] mb-[5rem]">
-          <div className="flex items-center justify-start px-[0.3rem] w-[3.5rem] h-[1rem] bg-[#FFF] rounded-full">
-            <span className="flex w-[1rem] h-[0.5rem] bg-[#000] rounded-full"></span>
-          </div>
-          <img className="w-[2rem]" src={Heart} alt="Heart" />
-        </div>
+        <Hp />
       </div>
       <div className="flex flex-col items-center">
         <WordToGuess />
