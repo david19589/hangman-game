@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useStateStore } from "../../../../utils/store";
+import { useState } from "react";
+import clsx from "clsx";
 
 function YouLose() {
-  const { resetGame } = useStateStore();
-
+  const { resetGame, word } = useStateStore();
+  const [reveal, setReveal] = useState(false);
   return (
     <div className="flex flex-col items-center justify-center absolute top-0 bottom-0 left-0 right-0 px-[1.5rem] bg-gradient-to-b from-[#1a043abd] via-[#151278b0] to-[#2b16779d]">
       <div className="flex flex-col items-center max-w-[37rem] w-full px-[2rem] pb-[5.5rem] shadow-custom-shadow bg-gradient-to-b from-[#344aba] to-[#001479e5] rounded-[4rem]">
@@ -36,6 +38,25 @@ function YouLose() {
             QUIT GAME
           </button>
         </Link>
+        <button
+          onClick={() => {
+            setReveal(true);
+          }}
+          className={clsx(
+            reveal ? "hidden" : "flex",
+            "text-[2rem] leading-[2.4rem] text-[#FFF] hover:text-[#ffffffaf] translate-x-[-12rem] translate-y-[2rem] transition-all duration-300"
+          )}
+        >
+          Reveal
+        </button>
+        <h2
+          className={clsx(
+            reveal ? "flex" : "hidden",
+            "text-[1.5rem] leading-[2.4rem] text-[#FFF] translate-x-[-12rem] translate-y-[2rem]"
+          )}
+        >
+          {word}
+        </h2>
       </div>
     </div>
   );
