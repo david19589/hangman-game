@@ -44,7 +44,7 @@ function YouLose() {
           }}
           className={clsx(
             reveal ? "hidden" : "flex",
-            "text-[2rem] leading-[2.4rem] text-[#FFF] hover:text-[#ffffffaf] translate-x-[-12rem] translate-y-[2rem] transition-all duration-300"
+            "text-[2rem] leading-[2.4rem] text-[#FFF] hover:text-[#ffffffaf] md:translate-x-[-12rem] translate-y-[2rem]  md:translate-y-[2rem] transition-all duration-300"
           )}
         >
           Reveal
@@ -52,7 +52,7 @@ function YouLose() {
         <h2
           className={clsx(
             reveal ? "flex" : "hidden",
-            "text-[1.5rem] leading-[2.4rem] text-[#FFF] translate-x-[-12rem] translate-y-[2rem]"
+            "text-[1.5rem] leading-[2.4rem] text-[#FFF] md:translate-x-[-12rem] md:translate-y-[2rem] translate-y-[2rem]" 
           )}
         >
           {word}
