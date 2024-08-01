@@ -34,7 +34,7 @@ function Countries() {
     }
   }, [incorrectLetters.length, setYouLose]);
 
-  return <GameContent />;
+  return <GameContent title="Countries" />;
 }
 
 export default Countries;

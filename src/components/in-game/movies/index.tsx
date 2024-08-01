@@ -34,7 +34,7 @@ function Movies() {
     }
   }, [incorrectLetters.length, setYouLose]);
 
-  return <GameContent />;
+  return <GameContent title="Movies" />;
 }
 
 export default Movies;

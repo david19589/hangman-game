@@ -34,7 +34,7 @@ function CapitalCities() {
     }
   }, [incorrectLetters.length, setYouLose]);
 
-  return <GameContent />;
+  return <GameContent title="Capital Cities" />;
 }
 
 export default CapitalCities;

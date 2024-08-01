@@ -34,7 +34,7 @@ function Sports() {
     }
   }, [incorrectLetters.length, setYouLose]);
 
-  return <GameContent />;
+  return <GameContent title="Sports" />;
 }
 
 export default Sports;

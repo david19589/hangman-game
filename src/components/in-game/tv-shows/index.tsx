@@ -34,7 +34,7 @@ function TvShows() {
     }
   }, [incorrectLetters.length, setYouLose]);
 
-  return <GameContent />;
+  return <GameContent title="Tv Shows" />;
 }
 
 export default TvShows;

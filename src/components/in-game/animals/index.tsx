@@ -34,7 +34,7 @@ function Animals() {
     }
   }, [incorrectLetters.length, setYouLose]);
 
-  return <GameContent />;
+  return <GameContent title="Animals" />;
 }
 
 export default Animals;

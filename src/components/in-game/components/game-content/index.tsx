@@ -7,8 +7,8 @@ import YouLose from "../you-lose";
 import { useStateStore } from "../../../../utils/store";
 import Hp from "../hp";
 
-function GameContent() {
-  const { pause, setPause, youWin, youLose, currentCategory } = useStateStore();
+function GameContent({ title }: { title: string }) {
+  const { pause, setPause, youWin, youLose } = useStateStore();
 
   return (
     <div className="md:px-[2.5rem] md:pt-[3rem] flex flex-col items-center min-h-[100vh] px-[1.5rem] pt-[2rem] pb-[3.5rem] bg-gradient-to-b from-[#1A043A] via-[#151278] to-[#2B1677]">
@@ -25,12 +25,7 @@ function GameContent() {
             />
           </button>
           <h1 className="sm:text-[3rem] text-[1.5rem] leading-[3.6rem] text-[#FFF]">
-            {currentCategory === "movies" && "Movies"}
-            {currentCategory === "tv-shows" && "Tv Shows"}
-            {currentCategory === "countries" && "Countries"}
-            {currentCategory === "capital-cities" && "Capital Cities"}
-            {currentCategory === "animals" && "Animals"}
-            {currentCategory === "sports" && "Sports"}
+            {title}
           </h1>
         </div>
         <Hp />
